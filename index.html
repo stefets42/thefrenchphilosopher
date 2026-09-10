@@ -62,6 +62,8 @@
     .navlinks{display:none !important}
    .r-laurel{height:48px !important}
    .r-badge{font-size:13px !important;max-width:20em !important}
+    .nav-burger{display:flex !important}
+    #nav-toggle:checked ~ .mobile-menu{display:flex !important}
   }
   @media (max-width:560px){
     .booksrow{gap:14px !important}
@@ -79,14 +81,24 @@
 
       <!-- nav -->
       <div class="r-navpad" style="position:sticky; top:0; z-index:60; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px 56px; background:#FFFFFF; border-bottom:1px solid #DCE2E4">
-        <span style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; letter-spacing:-.01em; color:#13383B">Stephanie Lehuger <span style="color:#B85417">·</span> <span style="font-weight:600; color:#5E7B7E">Humanist Philosopher & Tech Entrepreneur</span></span>
+        <input type="checkbox" id="nav-toggle" style="display:none">
+        <span style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; letter-spacing:-.01em; color:#13383B">Stephanie Lehuger <span style="color:#B85417">·</span> <span style="font-weight:600; color:#5E7B7E">Humanist Philosopher &amp; Tech Entrepreneur</span></span>
         <div style="display:flex; align-items:center; gap:24px">
           <span class="navlinks" style="display:flex; align-items:center; gap:24px">
             <a href="#built" class="h3" style="font-size:13px; font-weight:600; color:#3D6467; text-decoration:none">Roles</a>
             <a href="#credentials" class="h3" style="font-size:13px; font-weight:600; color:#3D6467; text-decoration:none">Recognition</a>
             <a href="#media" class="h3" style="font-size:13px; font-weight:600; color:#3D6467; text-decoration:none">Media &amp; Talks</a>
           </span>
-          <a href="mailto:stefets@gmail.com?subject=Book%20Stephanie%20For%20My%20Event&amp;body=Hello,%20I'd%20love%20to%20book%20Stephanie%20for%20my%20event,%20can%20we%20talk?%20Best," class="h4" style="display:flex; align-items:center; height:40px; padding:0 22px; border-radius:100px; background:#13383B; color:#FBEBE0; font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; white-space:nowrap">Get in touch</a>
+          <label for="nav-toggle" class="nav-burger" style="display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px">
+            <span style="display:block; width:22px; height:2px; background:#13383B; border-radius:2px"></span>
+            <span style="display:block; width:22px; height:2px; background:#13383B; border-radius:2px"></span>
+            <span style="display:block; width:22px; height:2px; background:#13383B; border-radius:2px"></span>
+          </label>
+        </div>
+        <div class="mobile-menu" style="display:none; position:absolute; top:100%; left:0; right:0; background:#FFFFFF; border-bottom:1px solid #DCE2E4; flex-direction:column; padding:16px 22px; gap:14px; box-shadow:0 8px 16px rgba(19,56,59,.08)">
+          <a href="#built" style="font-size:15px; font-weight:600; color:#13383B; text-decoration:none">Roles</a>
+          <a href="#credentials" style="font-size:15px; font-weight:600; color:#13383B; text-decoration:none">Recognition</a>
+          <a href="#media" style="font-size:15px; font-weight:600; color:#13383B; text-decoration:none">Media &amp; Talks</a>
         </div>
       </div>
 
@@ -248,19 +260,6 @@
           </div>
         </div>
         <span style="font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#B85417"><a href="https://blog.apaonline.org/2023/09/01/apa-member-interview-stephanie-lehuger/" target="_blank" rel="noopener" style="color:inherit; text-decoration:none">American Philosophical Association</a> · <a href="https://www.les-philosophes.fr/agora/stephanie-lehuger.html" target="_blank" rel="noopener" style="color:inherit; text-decoration:none">Les Philosophes</a> · <a href="https://www.youtube.com/watch?v=8pXIAnYLrFc&amp;t=730s" target="_blank" rel="noopener" style="color:inherit; text-decoration:none">France 24</a> · <a href="https://youtu.be/AgkJnTgG0Qk" target="_blank" rel="noopener" style="color:inherit; text-decoration:none">France Info</a> · <a href="https://www.facebook.com/watch/?v=285521565395838" target="_blank" rel="noopener" style="color:inherit; text-decoration:none">AJ+</a> · <a href="https://www.youtube.com/watch?v=whQPLXgFH7o" target="_blank" rel="noopener" style="color:inherit; text-decoration:none">Infrarouge — France 2</a> · <a href="https://www.youtube.com/watch?v=mzv_QH1YZ6Q" target="_blank" rel="noopener" style="color:inherit; text-decoration:none">Parliamentary forum on artificial intelligence</a></span>
-      </div>
-
-      <!-- media -->
-      <div class="r-pad" style="padding:34px 56px 52px; display:flex; flex-direction:column; gap:18px">
-        <div style="display:flex; flex-wrap:wrap; gap:10px">
-            <a class="h4" href="https://blog.apaonline.org/2023/09/01/apa-member-interview-stephanie-lehuger/" target="_blank" rel="noopener" style="padding:11px 20px; border-radius:100px; background:#F6F8F8; border:1px solid #DCE2E4; font-size:15px; font-weight:600; color:#13383B; text-decoration:none; white-space:nowrap">American Philosophical Association</a>
-            <a class="h4" href="https://www.les-philosophes.fr/agora/stephanie-lehuger.html" target="_blank" rel="noopener" style="padding:11px 20px; border-radius:100px; background:#F6F8F8; border:1px solid #DCE2E4; font-size:15px; font-weight:600; color:#13383B; text-decoration:none; white-space:nowrap">Les Philosophes</a>
-            <a class="h4" href="https://www.youtube.com/watch?v=8pXIAnYLrFc&amp;t=730s" target="_blank" rel="noopener" style="padding:11px 20px; border-radius:100px; background:#F6F8F8; border:1px solid #DCE2E4; font-size:15px; font-weight:600; color:#13383B; text-decoration:none; white-space:nowrap">France 24</a>
-<a class="h4" href="https://youtu.be/AgkJnTgG0Qk" target="_blank" rel="noopener" style="padding:11px 20px; border-radius:100px; background:#F6F8F8; border:1px solid #DCE2E4; font-size:15px; font-weight:600; color:#13383B; text-decoration:none; white-space:nowrap">France Info</a>
-            <a class="h4" href="https://www.facebook.com/watch/?v=285521565395838" target="_blank" rel="noopener" style="padding:11px 20px; border-radius:100px; background:#F6F8F8; border:1px solid #DCE2E4; font-size:15px; font-weight:600; color:#13383B; text-decoration:none; white-space:nowrap">AJ+</a>
-            <a class="h4" href="https://www.youtube.com/watch?v=whQPLXgFH7o" target="_blank" rel="noopener" style="padding:11px 20px; border-radius:100px; background:#F6F8F8; border:1px solid #DCE2E4; font-size:15px; font-weight:600; color:#13383B; text-decoration:none; white-space:nowrap">Infrarouge — France 2</a>
-            <a class="h4" href="https://www.youtube.com/watch?v=mzv_QH1YZ6Q" target="_blank" rel="noopener" style="padding:11px 20px; border-radius:100px; background:#F6F8F8; border:1px solid #DCE2E4; font-size:15px; font-weight:600; color:#13383B; text-decoration:none; white-space:nowrap">Parliamentary forum on artificial intelligence</a>
-        </div>
       </div>
 
       <!-- keynotes -->
