@@ -180,38 +180,58 @@ CTA = ("font-size:11px; font-weight:700; letter-spacing:.18em; "
 CARD = "display:flex; text-decoration:none; color:#13383B"
 
 
+CUE = ("font-size:10.5px; font-weight:700; letter-spacing:.14em; "
+       "text-transform:uppercase; color:#B85417; white-space:nowrap")
+
+
 def episode_row(ep):
-    """Title and excerpt only — no date or duration line."""
-    return f'''<a class="card" href="{e(ep['url'])}" target="_blank" rel="noopener" style="{CARD}; flex-direction:column; gap:7px; padding:18px 0; border-top:1px solid #DCE2E4">
-                <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:18px; line-height:1.25; letter-spacing:-.01em; max-width:52ch">{e(ep['title'])}</span>
-                <span style="font-size:14px; line-height:1.55; color:#3D6467; max-width:62ch">{e(ep['blurb'])}</span>
+    """A row per episode. The cue on the right is what says it is clickable."""
+    return f'''<a class="card" href="{e(ep['url'])}" target="_blank" rel="noopener" style="{CARD}; gap:18px; align-items:center; padding:18px 0; border-top:1px solid #DCE2E4">
+                <span style="display:flex; flex-direction:column; gap:7px; flex:1; min-width:0">
+                  <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:18px; line-height:1.25; letter-spacing:-.01em; max-width:52ch">{e(ep['title'])}</span>
+                  <span style="font-size:14px; line-height:1.55; color:#3D6467; max-width:62ch">{e(ep['blurb'])}</span>
+                </span>
+                <span class="card-cue" style="{CUE}">Listen &#8594;</span>
+              </a>'''
+
+
+def episode_more():
+    """The way on to the rest sits at the end of the list, where the eye already
+    is, rather than beside the heading where it has stopped looking."""
+    return f'''<a class="card" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="{CARD}; gap:18px; align-items:center; padding:16px 0; border-top:1px solid #DCE2E4">
+                <span class="card-cue" style="{CUE}">Have a look at all podcast episodes &#8594;</span>
               </a>'''
 
 
 def article_card(a):
     """Text only — the LinkedIn cover art does not match the site's style."""
     return f'''<a class="card" href="{e(a['url'])}" target="_blank" rel="noopener" style="{CARD}; flex-direction:column; gap:9px; padding:20px 22px; border-radius:15px; background:#FFFFFF; border:1px solid #DCE2E4">
-              <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.25; letter-spacing:-.01em">{e(a['title'])}</span>
+              <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; line-height:1.25; letter-spacing:-.01em">{e(a['title'])}</span>
               <span style="font-size:13.5px; line-height:1.5; color:#3D6467">{e(a['blurb'])}</span>
+              <span class="card-cue" style="{CUE}; margin-top:auto; padding-top:4px">Read &#8594;</span>
+            </a>'''
+
+
+def article_more():
+    return f'''<a class="card" href="{NEWSLETTER}" target="_blank" rel="noopener" style="{CARD}; flex-direction:column; justify-content:center; align-items:flex-start; gap:9px; padding:20px 22px; border-radius:15px; background:#FBEBE0; border:1px solid #FBEBE0">
+              <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; line-height:1.25; letter-spacing:-.01em">Read all newsletter issues</span>
+              <span class="card-cue" style="{CUE}">On LinkedIn &#8594;</span>
             </a>'''
 
 
 def render(episodes, articles):
-    rows = "\n              ".join(episode_row(x) for x in episodes)
-    cards = "\n            ".join(article_card(x) for x in articles)
+    rows = "\n              ".join(episode_row(x) for x in episodes) + "\n              " + episode_more()
+    cards = "\n            ".join(article_card(x) for x in articles) + "\n            " + article_more()
     cover = episodes[0]["image"] if episodes else ""
     return f'''{START}
       <div class="r-pad" id="content" style="padding:52px 56px; background:#FAFBFC; border-top:1px solid #DCE2E4; display:flex; flex-direction:column; gap:44px">
 
         <div style="display:flex; flex-direction:column; gap:22px">
-          <div class="r-row" style="display:flex; align-items:baseline; justify-content:space-between; gap:20px">
-            <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Listen to the podcast</h2>
-            <a class="linkedin-rec" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="{CTA}">Have a look at all podcast episodes →</a>
-          </div>
-          <!-- The cover has a fixed width and stretches to the episode list's
-               height, so the two columns always end flush. aspect-ratio cannot
-               do this in a flex row: its width would depend on a height that is
-               itself derived from the row, and it collapses to zero. -->
+          <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Listen to the podcast</h2>
+          <!-- The cover has a fixed width and stretches to the list's height, so
+               the two columns always end flush. aspect-ratio cannot do this in a
+               flex row: its width would depend on a height derived from the row,
+               and it collapses to zero. -->
           <div class="r-podcast" style="display:flex; gap:44px; align-items:stretch">
             <a class="clip" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="flex:0 0 auto; width:330px; min-height:330px; border-radius:15px; background:#FBEBE0 url({e(cover)}) center/cover no-repeat; box-shadow:0 8px 24px rgba(19,56,59,.14); text-decoration:none"></a>
             <div style="flex:1 1 0; min-width:0; display:flex; flex-direction:column">
@@ -221,11 +241,8 @@ def render(episodes, articles):
         </div>
 
         <div style="display:flex; flex-direction:column; gap:22px">
-          <div class="r-row" style="display:flex; align-items:baseline; justify-content:space-between; gap:20px">
-            <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Read the newsletter</h2>
-            <a class="linkedin-rec" href="{NEWSLETTER}" target="_blank" rel="noopener" style="{CTA}">Read all newsletter issues →</a>
-          </div>
-          <div class="r-3cards" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:26px">
+          <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Read the newsletter</h2>
+          <div class="r-3cards" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px">
             {cards}
           </div>
         </div>
