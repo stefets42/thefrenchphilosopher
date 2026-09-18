@@ -199,7 +199,7 @@ def episode_more():
     """The way on to the rest sits at the end of the list, where the eye already
     is, rather than beside the heading where it has stopped looking."""
     return f'''<a class="card" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="{CARD}; gap:18px; align-items:center; padding:16px 0; border-top:1px solid #DCE2E4">
-                <span class="card-cue" style="{CUE}">Have a look at all podcast episodes &#8594;</span>
+                <span class="card-cue" style="{CUE}">Listen to more podcast episodes &#8594;</span>
               </a>'''
 
 
@@ -214,8 +214,7 @@ def article_card(a):
 
 def article_more():
     return f'''<a class="card" href="{NEWSLETTER}" target="_blank" rel="noopener" style="{CARD}; flex-direction:column; justify-content:center; align-items:flex-start; gap:9px; padding:20px 22px; border-radius:15px; background:#FBEBE0; border:1px solid #FBEBE0">
-              <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; line-height:1.25; letter-spacing:-.01em">Read all newsletter issues</span>
-              <span class="card-cue" style="{CUE}">On LinkedIn &#8594;</span>
+              <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; line-height:1.3; letter-spacing:-.01em">Read more newsletter issues &#8594;</span>
             </a>'''
 
 
