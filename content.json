@@ -1,0 +1,57 @@
+{
+  "episodes": [
+    {
+      "title": "Who Are You on a Tuesday at 10am?",
+      "url": "https://podcasts.apple.com/us/podcast/62-who-are-you-on-a-tuesday-at-10am/id1543657106?i=1000779984960",
+      "date": "2026-08-05",
+      "date_label": "AUG 2026",
+      "minutes": 21,
+      "blurb": "You're at a party. Someone hands you a drink and asks the most unavoidable question there is: so, what do you do? Notice what happens next. They…",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/06/b9/13/06b91355-3a65-2ca1-98b5-0007eef94241/mza_8149517466047883734.jpg/600x600bb.jpg"
+    },
+    {
+      "title": "How To Outsmart Your Resolutions With Strategy So That They Stick",
+      "url": "https://podcasts.apple.com/us/podcast/61-how-to-outsmart-your-resolutions-with-strategy-so/id1543657106?i=1000743361032",
+      "date": "2025-12-31",
+      "date_label": "DEC 2025",
+      "minutes": 6,
+      "blurb": "Here is the scene. You swear you will go running tomorrow. Tomorrow arrives. So does rain and a croissant. Suddenly, the morning jog turns into a…",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/06/b9/13/06b91355-3a65-2ca1-98b5-0007eef94241/mza_8149517466047883734.jpg/600x600bb.jpg"
+    },
+    {
+      "title": "When LinkedIn gratitude feels like emotional spam",
+      "url": "https://podcasts.apple.com/us/podcast/60-when-linkedin-gratitude-feels-like-emotional-spam/id1543657106?i=1000737317600",
+      "date": "2025-11-18",
+      "date_label": "NOV 2025",
+      "minutes": 2,
+      "blurb": "Wow, Thanksgiving hits LinkedIn hard in the US: “I’m grateful for my boss” ; “I’m grateful for my dog” ; “I’m grateful for my favorite stapler.” I’m…",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/06/b9/13/06b91355-3a65-2ca1-98b5-0007eef94241/mza_8149517466047883734.jpg/600x600bb.jpg"
+    }
+  ],
+  "articles": [
+    {
+      "title": "The Dishes, the Cathedral, and the Quiet Guilt (2/3)",
+      "url": "https://www.linkedin.com/pulse/dishes-cathedral-quiet-guilt-23-stephanie-lehuger-xoehc",
+      "date": "2026-09-16",
+      "date_label": "SEP 2026",
+      "image": "https://media.licdn.com/dms/image/v2/D5612AQGcBdRZ4ILnKw/article-cover_image-shrink_720_1280/B56aCrrewNIwAQ-/0/1789586697651?e=2147483647&v=beta&t=vh-r_F9VFuBPSboR0RxA4qCWnZaL-Chi_ZJtwzjItTA",
+      "blurb": "There's a particular kind of tired that has nothing to do with effort. It's the tired of doing something, undoing it, and doing it again tomorrow."
+    },
+    {
+      "title": "The Rock Rolls Itself Now (1/3)",
+      "url": "https://www.linkedin.com/pulse/rock-rolls-itself-now-stephanie-lehuger-27ppc",
+      "date": "2026-01-05",
+      "date_label": "JAN 2026",
+      "image": "https://media.licdn.com/dms/image/v2/D5612AQFja7vj8b455g/article-cover_image-shrink_720_1280/B56aCohCQVKsAU-/0/1789533631159?e=2147483647&v=beta&t=T3_AJJyNSnp4J8EV8HAzwz3FzJltY4GfiQdw8eO_6_U",
+      "blurb": "You're at a party. A stranger hands you a drink and asks the most unavoidable question in the world: \"So, what do you do?\" Notice something strange."
+    },
+    {
+      "title": "Why Your Brain Cares More About  Fake Than Real People",
+      "url": "https://www.linkedin.com/pulse/why-your-brain-cares-more-fake-than-real-people-stephanie-lehuger-arere",
+      "date": "2025-12-31",
+      "date_label": "DEC 2025",
+      "image": "https://media.licdn.com/dms/image/v2/D4E12AQEA7kb7bVkvSQ/article-cover_image-shrink_720_1280/B4EZt8IXnhJ4AI-/0/1767314130704?e=2147483647&v=beta&t=iS1YEZusNEnqJkPUl7dldutg0sjsFFtN7icoeecRp5M",
+      "blurb": "Is Instagram quietly rewiring your empathy? Discover how AI perfects your holidays while numbing how much you care."
+    }
+  ]
+}
