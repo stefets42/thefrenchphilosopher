@@ -171,6 +171,12 @@ def e(s):
 # rendering
 # --------------------------------------------------------------------------- #
 
+# Same small-caps label treatment as the site's section labels, underlined to
+# read as a link.
+CTA = ("font-size:11px; font-weight:700; letter-spacing:.18em; "
+       "text-transform:uppercase; color:#B85417; text-decoration:none; "
+       "display:inline-block; border-bottom:1px solid #B85417; padding-bottom:4px")
+
 CARD = "display:flex; text-decoration:none; color:#13383B"
 
 
@@ -200,7 +206,7 @@ def render(episodes, articles):
         <div style="display:flex; flex-direction:column; gap:22px">
           <div class="r-row" style="display:flex; align-items:baseline; justify-content:space-between; gap:20px">
             <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Listen to the podcast</h2>
-            <a class="linkedin-rec" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="font-size:13px; font-weight:600; color:#3D6467; text-decoration:none; border-bottom:1px solid #DCE2E4; white-space:nowrap">All episodes on Apple Podcasts →</a>
+            <a class="linkedin-rec" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="{CTA}">All podcast episodes on Apple Podcasts →</a>
           </div>
           <!-- The cover has a fixed width and stretches to the episode list's
                height, so the two columns always end flush. aspect-ratio cannot
@@ -217,7 +223,7 @@ def render(episodes, articles):
         <div style="display:flex; flex-direction:column; gap:22px">
           <div class="r-row" style="display:flex; align-items:baseline; justify-content:space-between; gap:20px">
             <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Read the newsletter</h2>
-            <a class="linkedin-rec" href="{NEWSLETTER}" target="_blank" rel="noopener" style="font-size:13px; font-weight:600; color:#3D6467; text-decoration:none; border-bottom:1px solid #DCE2E4; white-space:nowrap">All issues on LinkedIn →</a>
+            <a class="linkedin-rec" href="{NEWSLETTER}" target="_blank" rel="noopener" style="{CTA}">All newsletter issues on LinkedIn →</a>
           </div>
           <div class="r-3cards" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:26px">
             {cards}
