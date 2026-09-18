@@ -183,68 +183,67 @@ CARD = "display:flex; text-decoration:none; color:#13383B"
 CUE = ("font-size:10.5px; font-weight:700; letter-spacing:.14em; "
        "text-transform:uppercase; color:#B85417; white-space:nowrap")
 
+# Both halves of the section are built the same way: a 330px square, then a
+# list of three and the way onward. The square stretches to the list's height
+# so the two columns end flush.
+SQUARE = ("flex:0 0 auto; width:330px; min-height:330px; border-radius:15px; "
+          "text-decoration:none; box-shadow:0 8px 24px rgba(19,56,59,.14)")
+ROW = (CARD + "; gap:18px; align-items:center; padding:18px 0; "
+       "border-top:1px solid #DCE2E4")
 
-def episode_row(ep):
-    """A row per episode. The cue on the right is what says it is clickable."""
-    return f'''<a class="card" href="{e(ep['url'])}" target="_blank" rel="noopener" style="{CARD}; gap:18px; align-items:center; padding:18px 0; border-top:1px solid #DCE2E4">
+
+def _row(url, title, blurb, cue):
+    return f'''<a class="card" href="{e(url)}" target="_blank" rel="noopener" style="{ROW}">
                 <span style="display:flex; flex-direction:column; gap:7px; flex:1; min-width:0">
-                  <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:18px; line-height:1.25; letter-spacing:-.01em; max-width:52ch">{e(ep['title'])}</span>
-                  <span style="font-size:14px; line-height:1.55; color:#3D6467; max-width:62ch">{e(ep['blurb'])}</span>
+                  <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:18px; line-height:1.25; letter-spacing:-.01em; max-width:52ch">{e(title)}</span>
+                  <span style="font-size:14px; line-height:1.55; color:#3D6467; max-width:62ch">{e(blurb)}</span>
                 </span>
-                <span class="card-cue" style="{CUE}">Listen &#8594;</span>
+                <span class="card-cue" style="{CUE}">{cue} &#8594;</span>
               </a>'''
 
 
-def episode_more():
-    """The way on to the rest sits at the end of the list, where the eye already
-    is, rather than beside the heading where it has stopped looking."""
-    return f'''<a class="card" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="{CARD}; gap:18px; align-items:center; padding:16px 0; border-top:1px solid #DCE2E4">
-                <span class="card-cue" style="{CUE}">Listen to more podcast episodes &#8594;</span>
+def _more(url, label):
+    return f'''<a class="card" href="{e(url)}" target="_blank" rel="noopener" style="{ROW}; padding:16px 0">
+                <span class="card-cue" style="{CUE}">{label} &#8594;</span>
               </a>'''
 
 
-def article_card(a):
-    """Text only — the LinkedIn cover art does not match the site's style."""
-    return f'''<a class="card" href="{e(a['url'])}" target="_blank" rel="noopener" style="{CARD}; flex-direction:column; gap:9px; padding:20px 22px; border-radius:15px; background:#FFFFFF; border:1px solid #DCE2E4">
-              <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; line-height:1.25; letter-spacing:-.01em">{e(a['title'])}</span>
-              <span style="font-size:13.5px; line-height:1.5; color:#3D6467">{e(a['blurb'])}</span>
-              <span class="card-cue" style="{CUE}; margin-top:auto; padding-top:4px">Read &#8594;</span>
-            </a>'''
-
-
-def article_more():
-    return f'''<a class="card" href="{NEWSLETTER}" target="_blank" rel="noopener" style="{CARD}; flex-direction:column; justify-content:center; align-items:flex-start; gap:9px; padding:20px 22px; border-radius:15px; background:#FBEBE0; border:1px solid #FBEBE0">
-              <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; line-height:1.3; letter-spacing:-.01em">Read more newsletter issues &#8594;</span>
-            </a>'''
+def half(title, square, items, more_url, more_label):
+    return f'''<div style="display:flex; flex-direction:column; gap:22px">
+          <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">{title}</h2>
+          <div class="r-podcast" style="display:flex; gap:44px; align-items:stretch">
+            {square}
+            <div style="flex:1 1 0; min-width:0; display:flex; flex-direction:column">
+              {items}
+            </div>
+          </div>
+        </div>'''
 
 
 def render(episodes, articles):
-    rows = "\n              ".join(episode_row(x) for x in episodes) + "\n              " + episode_more()
-    cards = "\n            ".join(article_card(x) for x in articles) + "\n            " + article_more()
     cover = episodes[0]["image"] if episodes else ""
+    pod_square = (f'''<a class="clip" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="{SQUARE}; background:#FBEBE0 url({e(cover)}) center/cover no-repeat"></a>''')
+    # No newsletter artwork fits the site, so the square is typeset instead of
+    # borrowed: same palette, no external asset to source or keep in step.
+    news_square = (f'''<a class="clip" href="{NEWSLETTER}" target="_blank" rel="noopener" style="{SQUARE}; background:#13383B; display:flex; flex-direction:column; justify-content:space-between; padding:28px 26px">
+              <span style="font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#E39A6B">The French Philosopher</span>
+              <span style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:40px; line-height:1.02; letter-spacing:-.03em; color:#FBEBE0">The<br>newsletter</span>
+              <span style="font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#8FA6A8">On LinkedIn &#8594;</span>
+            </a>''')
+
+    pod_items = "\n              ".join(
+        _row(x["url"], x["title"], x["blurb"], "Listen") for x in episodes)
+    pod_items += "\n              " + _more(APPLE_SHOW, "Listen to more podcast episodes")
+    news_items = "\n              ".join(
+        _row(x["url"], x["title"], x["blurb"], "Read") for x in articles)
+    news_items += "\n              " + _more(NEWSLETTER, "Read more newsletter issues")
+
     return f'''{START}
-      <div class="r-pad" id="content" style="padding:52px 56px; background:#FAFBFC; border-top:1px solid #DCE2E4; display:flex; flex-direction:column; gap:44px">
+      <div class="r-pad" id="content" style="padding:52px 56px; background:#FAFBFC; border-top:1px solid #DCE2E4; display:flex; flex-direction:column; gap:52px">
 
-        <div style="display:flex; flex-direction:column; gap:22px">
-          <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Listen to the podcast</h2>
-          <!-- The cover has a fixed width and stretches to the list's height, so
-               the two columns always end flush. aspect-ratio cannot do this in a
-               flex row: its width would depend on a height derived from the row,
-               and it collapses to zero. -->
-          <div class="r-podcast" style="display:flex; gap:44px; align-items:stretch">
-            <a class="clip" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="flex:0 0 auto; width:330px; min-height:330px; border-radius:15px; background:#FBEBE0 url({e(cover)}) center/cover no-repeat; box-shadow:0 8px 24px rgba(19,56,59,.14); text-decoration:none"></a>
-            <div style="flex:1 1 0; min-width:0; display:flex; flex-direction:column">
-              {rows}
-            </div>
-          </div>
-        </div>
+        {half("Listen to the podcast", pod_square, pod_items, APPLE_SHOW, "")}
 
-        <div style="display:flex; flex-direction:column; gap:22px">
-          <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Read the newsletter</h2>
-          <div class="r-3cards" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px">
-            {cards}
-          </div>
-        </div>
+        {half("Read the newsletter", news_square, news_items, NEWSLETTER, "")}
 
       </div>
       {END}'''
