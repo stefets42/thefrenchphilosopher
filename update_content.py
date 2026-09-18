@@ -206,7 +206,7 @@ def render(episodes, articles):
         <div style="display:flex; flex-direction:column; gap:22px">
           <div class="r-row" style="display:flex; align-items:baseline; justify-content:space-between; gap:20px">
             <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Listen to the podcast</h2>
-            <a class="linkedin-rec" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="{CTA}">All podcast episodes</a>
+            <a class="linkedin-rec" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="{CTA}">Have a look at all podcast episodes →</a>
           </div>
           <!-- The cover has a fixed width and stretches to the episode list's
                height, so the two columns always end flush. aspect-ratio cannot
@@ -223,7 +223,7 @@ def render(episodes, articles):
         <div style="display:flex; flex-direction:column; gap:22px">
           <div class="r-row" style="display:flex; align-items:baseline; justify-content:space-between; gap:20px">
             <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Read the newsletter</h2>
-            <a class="linkedin-rec" href="{NEWSLETTER}" target="_blank" rel="noopener" style="{CTA}">All newsletter issues</a>
+            <a class="linkedin-rec" href="{NEWSLETTER}" target="_blank" rel="noopener" style="{CTA}">Read all newsletter issues →</a>
           </div>
           <div class="r-3cards" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:26px">
             {cards}
