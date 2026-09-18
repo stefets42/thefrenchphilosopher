@@ -174,45 +174,43 @@ def e(s):
 CARD = "display:flex; text-decoration:none; color:#13383B"
 
 
-def podcast_card(ep):
-    """Every episode shares the show artwork, so it stays a small thumbnail."""
-    meta = " · ".join(x for x in (ep["date_label"],
-                                  f"{ep['minutes']} MIN" if ep.get("minutes") else "") if x)
-    return f'''<a class="card" href="{e(ep['url'])}" target="_blank" rel="noopener" style="{CARD}; gap:16px; align-items:flex-start; padding:16px; border-radius:15px; background:#FFFFFF; border:1px solid #DCE2E4">
-              <span style="flex:0 0 auto; position:relative; width:76px; height:76px; border-radius:11px; overflow:hidden; background:#FBEBE0 url({e(ep['image'])}) center/cover no-repeat">
-                <span style="position:absolute; right:5px; bottom:5px; width:22px; height:22px; border-radius:100px; background:rgba(19,56,59,.86); color:#FBEBE0; font-size:9px; line-height:22px; text-align:center">&#9654;</span>
-              </span>
-              <span style="display:flex; flex-direction:column; gap:6px; min-width:0">
-                <span style="font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#B85417">{e(meta)}</span>
-                <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; line-height:1.25; letter-spacing:-.01em">{e(ep['title'])}</span>
-                <span style="font-size:13.5px; line-height:1.5; color:#3D6467">{e(ep['blurb'])}</span>
-              </span>
-            </a>'''
+def episode_row(ep):
+    """Title and excerpt only — no date or duration line."""
+    return f'''<a class="card" href="{e(ep['url'])}" target="_blank" rel="noopener" style="{CARD}; flex-direction:column; gap:7px; padding:18px 0; border-top:1px solid #DCE2E4">
+                <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:18px; line-height:1.25; letter-spacing:-.01em; max-width:52ch">{e(ep['title'])}</span>
+                <span style="font-size:14px; line-height:1.55; color:#3D6467; max-width:62ch">{e(ep['blurb'])}</span>
+              </a>'''
 
 
 def article_card(a):
-    """Each newsletter issue has its own cover image, so it leads the card."""
-    return f'''<a class="card" href="{e(a['url'])}" target="_blank" rel="noopener" style="{CARD}; flex-direction:column; gap:12px">
-              <span style="display:block; position:relative; width:100%; aspect-ratio:16/9; border-radius:15px; overflow:hidden; background:#FBEBE0 url({e(a['image'])}) center/cover no-repeat; box-shadow:0 2px 8px rgba(19,56,59,.10)"></span>
-              <span style="font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#B85417">{e(a['date_label'])}</span>
+    """Text only — the LinkedIn cover art does not match the site's style."""
+    return f'''<a class="card" href="{e(a['url'])}" target="_blank" rel="noopener" style="{CARD}; flex-direction:column; gap:9px; padding:20px 22px; border-radius:15px; background:#FFFFFF; border:1px solid #DCE2E4">
               <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.25; letter-spacing:-.01em">{e(a['title'])}</span>
               <span style="font-size:13.5px; line-height:1.5; color:#3D6467">{e(a['blurb'])}</span>
             </a>'''
 
 
 def render(episodes, articles):
-    eps = "\n            ".join(podcast_card(x) for x in episodes)
-    arts = "\n            ".join(article_card(x) for x in articles)
+    rows = "\n              ".join(episode_row(x) for x in episodes)
+    cards = "\n            ".join(article_card(x) for x in articles)
+    cover = episodes[0]["image"] if episodes else ""
     return f'''{START}
-      <div class="r-pad" id="content" style="padding:52px 56px; background:#FAFBFC; border-top:1px solid #DCE2E4; border-bottom:1px solid #DCE2E4; display:flex; flex-direction:column; gap:44px">
+      <div class="r-pad" id="content" style="padding:52px 56px; background:#FAFBFC; border-top:1px solid #DCE2E4; display:flex; flex-direction:column; gap:44px">
 
         <div style="display:flex; flex-direction:column; gap:22px">
           <div class="r-row" style="display:flex; align-items:baseline; justify-content:space-between; gap:20px">
             <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">Listen to the podcast</h2>
             <a class="linkedin-rec" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="font-size:13px; font-weight:600; color:#3D6467; text-decoration:none; border-bottom:1px solid #DCE2E4; white-space:nowrap">All episodes on Apple Podcasts →</a>
           </div>
-          <div class="r-3cards" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:26px">
-            {eps}
+          <!-- The cover has a fixed width and stretches to the episode list's
+               height, so the two columns always end flush. aspect-ratio cannot
+               do this in a flex row: its width would depend on a height that is
+               itself derived from the row, and it collapses to zero. -->
+          <div class="r-podcast" style="display:flex; gap:44px; align-items:stretch">
+            <a class="clip" href="{APPLE_SHOW}" target="_blank" rel="noopener" style="flex:0 0 auto; width:330px; min-height:330px; border-radius:15px; background:#FBEBE0 url({e(cover)}) center/cover no-repeat; box-shadow:0 8px 24px rgba(19,56,59,.14); text-decoration:none"></a>
+            <div style="flex:1 1 0; min-width:0; display:flex; flex-direction:column">
+              {rows}
+            </div>
           </div>
         </div>
 
@@ -222,7 +220,7 @@ def render(episodes, articles):
             <a class="linkedin-rec" href="{NEWSLETTER}" target="_blank" rel="noopener" style="font-size:13px; font-weight:600; color:#3D6467; text-decoration:none; border-bottom:1px solid #DCE2E4; white-space:nowrap">All issues on LinkedIn →</a>
           </div>
           <div class="r-3cards" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:26px">
-            {arts}
+            {cards}
           </div>
         </div>
 
