@@ -38,6 +38,9 @@
 .h8:hover{background:#E39A6B !important;color:#13383B !important}
 .h9:hover{background:rgba(255,255,255,.14) !important;color:#FBEBE0 !important}
 .h10:hover{background:rgba(255,255,255,.2) !important;color:#FFFFFF !important}
+.tcar-track{scrollbar-width:none;-ms-overflow-style:none}
+.tcar-track::-webkit-scrollbar{display:none}
+.tcar-track > div{scroll-snap-align:start}
 .card:hover .card-t{color:#B85417}
 .card:hover span:first-child{box-shadow:0 8px 24px rgba(19,56,59,.22) !important}
   @media (max-width:1100px){
@@ -45,7 +48,6 @@
     .r-3cards{gap:20px !important}
     .r-podcast{gap:32px !important}
     .r-podcast > a{width:290px !important;min-height:290px !important}
-    .r-cols{columns:2 !important}
     .r-pad,.r-navpad{padding-left:36px !important;padding-right:36px !important}
     .r-h1{font-size:54px !important}
   }
@@ -78,7 +80,6 @@
     .booksrow img{max-width:132px !important}
     .r-5{grid-template-columns:repeat(2,1fr) !important}
     .r-3cards{grid-template-columns:1fr !important}
-    .r-cols{columns:1 !important}
     .r-h1{font-size:33px !important;letter-spacing:-.02em !important}
    .r-laurel{height:38px !important}
    .r-badge{font-size:11px !important;max-width:24em !important}
@@ -401,98 +402,50 @@
           <h2 class="r-h2" style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:38px; line-height:1.05; letter-spacing:-.03em; color:#13383B">What others say about Stephanie</h2>
           <a class="linkedin-rec" href="https://www.linkedin.com/in/stefets42/details/recommendations/" target="_blank" rel="noopener" style="font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#B85417; text-decoration:none; display:inline-block; border-bottom:1px solid #B85417; padding-bottom:4px">Read all recommendations on LinkedIn →</a>
         </div>
-        <div class="r-cols" style="columns:3; column-gap:40px">
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #B85417">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“Stéphanie is for me a wonderful example of powerful and kind women leadership.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Margaux Salzman</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Creative Ops, Picnic Technologies</span>
-            </span>
+        <div class="tcar" style="position:relative">
+          <div class="tcar-track" style="display:flex; gap:16px; overflow-x:auto; overscroll-behavior-x:contain">
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“Stéphanie is for me a wonderful example of powerful and kind women leadership.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Margaux Salzman</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Creative Ops, Picnic Technologies</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“You want Stéphanie in your team! She is full of energy, hard working, honest and competent in every department of a company: technology, sales, partnership, management, HR.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Gauthier Monserand</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder, Squadracer</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“Excellent manager, sparkling woman, brave and fair, it is an everyday joy to expand the business with Stephanie within the team and as a partner.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Yann Le Quinio</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“If curiosity, listening skills and the ability to grasp complex subjects are leadership competencies, then Stéphanie is definitely part of this new generation of leaders.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Isabelle Hilali</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder &amp; CEO, datacraft</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She's someone who doesn't just talk about execution but lives it.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Emmanuel Boursin</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">COO, Iconic Art</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“As our first employee in the French team, Stéphanie juggled between areas as diverse as partnerships, operations, and product, even during challenging times when we had to build both an ambitious project and a team from scratch.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Paul Duan</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder, Bayes Impact</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“With her outstanding organizational skills and high attention to details, she has set up the entire admin, accounting, and first steps of HR and legal foundations of our US company.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Jonathan Parisot</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Co-Founder &amp; CEO, Actiondesk (acquired by Datadog) — now Product Leader at Datadog</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“Her ability to bridge disciplines, foster collaboration, and align priorities made her a central figure in the company's progress.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Roman Klimov, PhD</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founding AI Engineer</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She gets to the bottom of things and takes to heart every mission she manages.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Siwar Achach Boubaya</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Product Manager</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She has a rare talent for making complex ethical dilemmas in technology accessible and compelling, seamlessly drawing on great philosophical thinkers to illuminate today's most pressing AI questions.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Dr. Sophie Degât</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Lecturer, Wharton / The Lauder Institute, University of Pennsylvania</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She captivated the audience and connected them emotionally with the talk, ensuring a memorable experience for the audience.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Jonathan Grizou</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Fractional AI Consultant</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She expertly highlighted the key issues, tailored her presentation to the audience, and provided concrete actionable examples.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Lucie Portmann</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Director of Learning and Development, BPCE Assurances</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She is a great speaker, very professional, passionate and fun. We want her back to speak at our event!”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Magali Olivier</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Director of Editorial Programming, Web2day</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“Stéphanie is for me a wonderful example of powerful and kind women leadership.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Margaux Salzman</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Creative Ops, Picnic Technologies</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“You want Stéphanie in your team! She is full of energy, hard working, honest and competent in every department of a company: technology, sales, partnership, management, HR.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Gauthier Monserand</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder, Squadracer</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“Excellent manager, sparkling woman, brave and fair, it is an everyday joy to expand the business with Stephanie within the team and as a partner.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Yann Le Quinio</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“If curiosity, listening skills and the ability to grasp complex subjects are leadership competencies, then Stéphanie is definitely part of this new generation of leaders.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Isabelle Hilali</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder &amp; CEO, datacraft</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She's someone who doesn't just talk about execution but lives it.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Emmanuel Boursin</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">COO, Iconic Art</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“As our first employee in the French team, Stéphanie juggled between areas as diverse as partnerships, operations, and product, even during challenging times when we had to build both an ambitious project and a team from scratch.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Paul Duan</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder, Bayes Impact</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“With her outstanding organizational skills and high attention to details, she has set up the entire admin, accounting, and first steps of HR and legal foundations of our US company.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Jonathan Parisot</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Co-Founder &amp; CEO, Actiondesk (acquired by Datadog) — now Product Leader at Datadog</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“Her ability to bridge disciplines, foster collaboration, and align priorities made her a central figure in the company's progress.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Roman Klimov, PhD</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founding AI Engineer</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She gets to the bottom of things and takes to heart every mission she manages.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Siwar Achach Boubaya</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Product Manager</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She has a rare talent for making complex ethical dilemmas in technology accessible and compelling, seamlessly drawing on great philosophical thinkers to illuminate today's most pressing AI questions.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Dr. Sophie Degât</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Lecturer, Wharton / The Lauder Institute, University of Pennsylvania</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She captivated the audience and connected them emotionally with the talk, ensuring a memorable experience for the audience.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Jonathan Grizou</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Fractional AI Consultant</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She expertly highlighted the key issues, tailored her presentation to the audience, and provided concrete actionable examples.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Lucie Portmann</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Director of Learning and Development, BPCE Assurances</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She is a great speaker, very professional, passionate and fun. We want her back to speak at our event!”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Magali Olivier</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Director of Editorial Programming, Web2day</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“Stéphanie is for me a wonderful example of powerful and kind women leadership.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Margaux Salzman</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Creative Ops, Picnic Technologies</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“You want Stéphanie in your team! She is full of energy, hard working, honest and competent in every department of a company: technology, sales, partnership, management, HR.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Gauthier Monserand</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder, Squadracer</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“Excellent manager, sparkling woman, brave and fair, it is an everyday joy to expand the business with Stephanie within the team and as a partner.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Yann Le Quinio</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“If curiosity, listening skills and the ability to grasp complex subjects are leadership competencies, then Stéphanie is definitely part of this new generation of leaders.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Isabelle Hilali</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder &amp; CEO, datacraft</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She's someone who doesn't just talk about execution but lives it.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Emmanuel Boursin</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">COO, Iconic Art</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“As our first employee in the French team, Stéphanie juggled between areas as diverse as partnerships, operations, and product, even during challenging times when we had to build both an ambitious project and a team from scratch.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Paul Duan</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founder, Bayes Impact</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“With her outstanding organizational skills and high attention to details, she has set up the entire admin, accounting, and first steps of HR and legal foundations of our US company.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Jonathan Parisot</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Co-Founder &amp; CEO, Actiondesk (acquired by Datadog) — now Product Leader at Datadog</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“Her ability to bridge disciplines, foster collaboration, and align priorities made her a central figure in the company's progress.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Roman Klimov, PhD</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Founding AI Engineer</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She gets to the bottom of things and takes to heart every mission she manages.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Siwar Achach Boubaya</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Product Manager</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She has a rare talent for making complex ethical dilemmas in technology accessible and compelling, seamlessly drawing on great philosophical thinkers to illuminate today's most pressing AI questions.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Dr. Sophie Degât</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Lecturer, Wharton / The Lauder Institute, University of Pennsylvania</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #13383B" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She captivated the audience and connected them emotionally with the talk, ensuring a memorable experience for the audience.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Jonathan Grizou</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Fractional AI Consultant</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #8FA6A8" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She expertly highlighted the key issues, tailored her presentation to the audience, and provided concrete actionable examples.”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Lucie Portmann</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Director of Learning and Development, BPCE Assurances</span></span></div>
+            <div style="flex:0 0 200px; display:flex; flex-direction:column; gap:11px; padding:15px 0 20px; border-top:2px solid #B85417" aria-hidden="true"><p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:14px; line-height:1.42; letter-spacing:-.01em; color:#13383B; display:-webkit-box; -webkit-line-clamp:8; -webkit-box-orient:vertical; overflow:hidden">“She is a great speaker, very professional, passionate and fun. We want her back to speak at our event!”</p><span style="display:flex; flex-direction:column; gap:2px; margin-top:auto"><span style="font-size:10.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Magali Olivier</span><span style="font-size:12px; line-height:1.35; color:#8FA6A8">Director of Editorial Programming, Web2day</span></span></div>
           </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #13383B">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“You want Stéphanie in your team! She is full of energy, hard working, honest and competent in every department of a company: technology, sales, partnership, management, HR.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Gauthier Monserand</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Founder, Squadracer</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #8FA6A8">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“Excellent manager, sparkling woman, brave and fair, it is an everyday joy to expand the business with Stephanie within the team and as a partner.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Yann Le Quinio</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Founder</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #B85417">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“If curiosity, listening skills and the ability to grasp complex subjects are leadership competencies, then Stéphanie is definitely part of this new generation of leaders.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Isabelle Hilali</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Founder &amp; CEO, datacraft</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #13383B">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“She's someone who doesn't just talk about execution but lives it.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Emmanuel Boursin</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">COO, Iconic Art</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #8FA6A8">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“As our first employee in the French team, Stéphanie juggled between areas as diverse as partnerships, operations, and product, even during challenging times when we had to build both an ambitious project and a team from scratch.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Paul Duan</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Founder, Bayes Impact</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #B85417">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“With her outstanding organizational skills and high attention to details, she has set up the entire admin, accounting, and first steps of HR and legal foundations of our US company.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Jonathan Parisot</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Co-Founder &amp; CEO, Actiondesk (acquired by Datadog) — now Product Leader at Datadog</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #13383B">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“Her ability to bridge disciplines, foster collaboration, and align priorities made her a central figure in the company's progress.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Roman Klimov, PhD</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Founding AI Engineer</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #8FA6A8">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“She gets to the bottom of things and takes to heart every mission she manages.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Siwar Achach Boubaya</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Product Manager</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #B85417">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“She has a rare talent for making complex ethical dilemmas in technology accessible and compelling, seamlessly drawing on great philosophical thinkers to illuminate today's most pressing AI questions.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Dr. Sophie Degât</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Lecturer, Wharton / The Lauder Institute, University of Pennsylvania</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #13383B">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“She captivated the audience and connected them emotionally with the talk, ensuring a memorable experience for the audience.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Jonathan Grizou</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Fractional AI Consultant</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #8FA6A8">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“She expertly highlighted the key issues, tailored her presentation to the audience, and provided concrete actionable examples.”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Lucie Portmann</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Director of Learning and Development, BPCE Assurances</span>
-            </span>
-          </div>
-          <div style="break-inside:avoid; display:flex; flex-direction:column; gap:12px; padding:16px 0 26px; border-top:2px solid #B85417">
-            <p style="margin:0; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:17px; line-height:1.32; letter-spacing:-.01em; color:#13383B; text-wrap:pretty">“She is a great speaker, very professional, passionate and fun. We want her back to speak at our event!”</p>
-            <span style="display:flex; flex-direction:column; gap:2px">
-              <span style="font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#13383B">Magali Olivier</span>
-              <span style="font-size:13px; line-height:1.4; color:#8FA6A8">Director of Editorial Programming, Web2day</span>
-            </span>
-          </div>
+          <span aria-hidden="true" style="position:absolute; top:0; left:0; bottom:0; width:52px; pointer-events:none; background:linear-gradient(to left, rgba(250,251,252,0), #FAFBFC)"></span>
+          <span aria-hidden="true" style="position:absolute; top:0; right:0; bottom:0; width:52px; pointer-events:none; background:linear-gradient(to right, rgba(250,251,252,0), #FAFBFC)"></span>
         </div>
       </div>
 
@@ -516,5 +469,86 @@
   <span style="font-size:13px; color:rgba(251,235,224,.62)">© 2026 Stephanie Lehuger — The French Philosopher</span>
 </footer>
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#13383B"/><text x="50" y="62" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#FBEBE0" text-anchor="middle">SL</text></svg></template>
+<script>
+/* Testimonials: an endless horizontal band. The cards are rendered twice, and
+   scrollLeft is kept inside [1, half) so wrapping is invisible. Auto-advance
+   pauses while someone is reading or dragging, and never starts if the visitor
+   asked for reduced motion. */
+(function () {
+  var track = document.querySelector('.tcar-track');
+  if (!track) return;
+
+  var unit = 0;                      /* width of one copy of the set */
+  var measure = function () {
+    var was = unit;
+    unit = track.scrollWidth / 3;
+    /* keep the card under the cursor in place when the width changes */
+    if (was > 0 && unit > 0) track.scrollLeft += unit - was;
+  };
+  measure();
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure);
+
+  /* The set is rendered three times and scrollLeft rests inside the middle
+     copy, so each threshold sits a third of a copy away from the opposite one.
+     A wrap can never trip the other rule, which is what made an earlier
+     two-copy version ping-pong between its two thresholds forever. */
+  var wrap = function () {
+    if (unit <= 0) return;
+    if (track.scrollLeft < unit * 0.5) track.scrollLeft += unit;
+    else if (track.scrollLeft > unit * 1.5) track.scrollLeft -= unit;
+  };
+  track.scrollLeft = unit;
+  track.addEventListener('scroll', wrap, { passive: true });
+
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var hovering = false, dragging = false, focused = false;
+  var paused = function () { return hovering || dragging || focused; };
+
+  track.addEventListener('pointerenter', function () { hovering = true; });
+  track.addEventListener('pointerleave', function () { hovering = false; });
+  track.addEventListener('focusin', function () { focused = true; });
+  track.addEventListener('focusout', function () { focused = false; });
+  track.addEventListener('pointerdown', function () { dragging = true; });
+  track.addEventListener('touchstart', function () { dragging = true; }, { passive: true });
+  /* released on window, so letting go outside the band still resumes it */
+  ['pointerup', 'pointercancel', 'touchend', 'touchcancel'].forEach(function (e) {
+    window.addEventListener(e, function () { dragging = false; }, { passive: true });
+  });
+
+  /* Only animate while the band is actually on screen, so the rest of the page
+     is not paying for a permanent requestAnimationFrame loop. */
+  var onScreen = true, running = false, last = 0;
+
+  var step = function (now) {
+    if (!onScreen) { running = false; return; }
+    var dt = last ? Math.min(now - last, 50) : 16;
+    last = now;
+    if (!paused() && !still.matches && unit > 0) {
+      track.scrollLeft += dt * 0.03;   /* ~30px per second */
+    }
+    /* Outside the pause check on purpose: someone who flicks the band to its
+       far end and keeps the cursor on it must still wrap round. That way the
+       loop does not depend on scroll events firing. */
+    wrap();
+    requestAnimationFrame(step);
+  };
+
+  var start = function () {
+    if (running || !onScreen) return;
+    running = true;
+    last = 0;
+    requestAnimationFrame(step);
+  };
+
+  if (typeof IntersectionObserver === 'function') {
+    new IntersectionObserver(function (entries) {
+      onScreen = entries[0].isIntersecting;
+      if (onScreen) start();
+    }, { rootMargin: '120px' }).observe(track);
+  }
+  start();
+})();
+</script>
 </body>
 </html>
