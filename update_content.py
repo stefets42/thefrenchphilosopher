@@ -203,8 +203,9 @@ def _row(url, title, blurb, cue):
 
 
 def _more(url, label):
-    return f'''<a class="card" href="{e(url)}" target="_blank" rel="noopener" style="{ROW}; padding:16px 0">
-                <span class="card-cue" style="{CUE}">{label} &#8594;</span>
+    """The onward action, so it carries more weight than the per-row cue."""
+    return f'''<a class="card" href="{e(url)}" target="_blank" rel="noopener" style="{ROW}; padding:19px 0">
+                <span class="card-t" style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:16px; line-height:1.3; letter-spacing:-.01em; color:#B85417">{label} &#8594;</span>
               </a>'''
 
 
@@ -228,7 +229,6 @@ def render(episodes, articles):
     news_square = (f'''<a class="clip" href="{NEWSLETTER}" target="_blank" rel="noopener" style="{SQUARE}; background:#13383B; display:flex; flex-direction:column; justify-content:space-between; padding:28px 26px">
               <span style="font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#E39A6B">The French Philosopher</span>
               <span style="font-family:'Plus Jakarta Sans'; font-weight:800; font-size:40px; line-height:1.02; letter-spacing:-.03em; color:#FBEBE0">The<br>newsletter</span>
-              <span style="font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#8FA6A8">On LinkedIn &#8594;</span>
             </a>''')
 
     pod_items = "\n              ".join(
