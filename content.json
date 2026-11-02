@@ -30,6 +30,14 @@
   ],
   "articles": [
     {
+      "title": "Loneliness is killing us. That's not a metaphor, it's a statistic. And we call it Freedom.",
+      "url": "https://www.linkedin.com/pulse/loneliness-killing-us-thats-metaphor-its-statistic-we-lehuger-eutae",
+      "date": "2026-09-18",
+      "date_label": "SEP 2026",
+      "image": "https://media.licdn.com/dms/image/v2/D4E12AQEYkSI0u99vQQ/article-cover_image-shrink_720_1280/B4EaGC2XWfIwAY-/0/1793196656125?e=2147483647&v=beta&t=vZDwO9FjZNGd4xPfY2BTVK3lUAzxcieX9Po_t7Q6mVU",
+      "blurb": "Being isolated is as dangerous for your health as smoking 15 cigarettes a day. That's the US Surgeon General's estimate, not mine."
+    },
+    {
       "title": "The One Thing AI Will Never Do for You (3/3)",
       "url": "https://www.linkedin.com/pulse/one-thing-ai-never-do-you-stephanie-lehuger-vbmgf",
       "date": "2026-09-17",
@@ -44,14 +52,6 @@
       "date_label": "SEP 2026",
       "image": "https://media.licdn.com/dms/image/v2/D5612AQGcBdRZ4ILnKw/article-cover_image-shrink_720_1280/B56aCrrewNIwAQ-/0/1789586697651?e=2147483647&v=beta&t=vh-r_F9VFuBPSboR0RxA4qCWnZaL-Chi_ZJtwzjItTA",
       "blurb": "There's a particular kind of tired that has nothing to do with effort. It's the tired of doing something, undoing it, and doing it again tomorrow."
-    },
-    {
-      "title": "The Rock Rolls Itself Now (1/3)",
-      "url": "https://www.linkedin.com/pulse/rock-rolls-itself-now-stephanie-lehuger-27ppc",
-      "date": "2026-01-05",
-      "date_label": "JAN 2026",
-      "image": "https://media.licdn.com/dms/image/v2/D5612AQFja7vj8b455g/article-cover_image-shrink_720_1280/B56aCohCQVKsAU-/0/1789533631159?e=2147483647&v=beta&t=T3_AJJyNSnp4J8EV8HAzwz3FzJltY4GfiQdw8eO_6_U",
-      "blurb": "You're at a party. A stranger hands you a drink and asks the most unavoidable question in the world: \"So, what do you do?\" Notice something strange."
     }
   ]
 }
