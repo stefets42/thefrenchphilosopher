@@ -1,6 +1,15 @@
 {
   "episodes": [
     {
+      "title": "Loneliness is killing us",
+      "url": "https://podcasts.apple.com/us/podcast/63-loneliness-is-killing-us/id1543657106?i=1000803606649",
+      "date": "2026-11-23",
+      "date_label": "NOV 2026",
+      "minutes": 12,
+      "blurb": "Loneliness is as bad for your health as smoking 15 cigarettes a day. So why do we celebrate the person who needs no one? A Harvard study that began…",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/06/b9/13/06b91355-3a65-2ca1-98b5-0007eef94241/mza_8149517466047883734.jpg/600x600bb.jpg"
+    },
+    {
       "title": "Who Are You on a Tuesday at 10am?",
       "url": "https://podcasts.apple.com/us/podcast/62-who-are-you-on-a-tuesday-at-10am/id1543657106?i=1000779984960",
       "date": "2026-08-05",
@@ -16,15 +25,6 @@
       "date_label": "DEC 2025",
       "minutes": 6,
       "blurb": "Here is the scene. You swear you will go running tomorrow. Tomorrow arrives. So does rain and a croissant. Suddenly, the morning jog turns into a…",
-      "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/06/b9/13/06b91355-3a65-2ca1-98b5-0007eef94241/mza_8149517466047883734.jpg/600x600bb.jpg"
-    },
-    {
-      "title": "When LinkedIn gratitude feels like emotional spam",
-      "url": "https://podcasts.apple.com/us/podcast/60-when-linkedin-gratitude-feels-like-emotional-spam/id1543657106?i=1000737317600",
-      "date": "2025-11-18",
-      "date_label": "NOV 2025",
-      "minutes": 2,
-      "blurb": "Wow, Thanksgiving hits LinkedIn hard in the US: “I’m grateful for my boss” ; “I’m grateful for my dog” ; “I’m grateful for my favorite stapler.” I’m…",
       "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/06/b9/13/06b91355-3a65-2ca1-98b5-0007eef94241/mza_8149517466047883734.jpg/600x600bb.jpg"
     }
   ],
